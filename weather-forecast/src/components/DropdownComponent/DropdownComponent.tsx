@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import getDropdownContent from "../../utils/helpers/getDropdownContent";
 import { store } from "../../App";
 import "./DropdownComponent.scss";
-import clearStorage from "../../utils/helpers/clearStorage";
 
 export default function DropdownComponent() {
   const [state, dispatch] = useContext(store);

@@ -4,10 +4,8 @@ import "./WeatherBoard.scss";
 import positionWork from "../../utils/helpers/positionWork";
 import SelectedWeatherSlice from "../SelectedWeatherSlice/SelectedWeatherSlice";
 import SelectedDayForecast from "../SelectedDayForecast/SelectedDayForecast";
-import ForecastList from "../ForecastList/ForecastList";
 import { ReactComponent as Loading } from "../../resources/images/svg/loading.svg";
 import { AnimatePresence, motion } from "framer-motion";
-import uuid from "react-uuid";
 
 export default function WeatherBoard() {
   const [state, dispatch] = useContext(store);
@@ -81,7 +79,6 @@ export default function WeatherBoard() {
               exit="exit"
               transition={{ type: "spring", bounce: 0.45 }}
             >
-              <ForecastList />
             </motion.div>
           </>
         )}

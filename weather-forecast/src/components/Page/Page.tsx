@@ -1,4 +1,4 @@
-import React, { Children, useContext, MouseEvent, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { store } from "../../App";
 import checkDropdown from "../../utils/helpers/checkDropdown";
 import checkSettings from "../../utils/helpers/checkSettings";

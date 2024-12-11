@@ -1,5 +1,4 @@
 import DropdownItemType from "../../types/DropdownItemType";
-import DropdownItem from "../../types/DropdownItemType";
 import storeType from "../../types/store";
 
 const getDropdownContent = (state: storeType) => {

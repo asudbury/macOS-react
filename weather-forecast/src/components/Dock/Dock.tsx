@@ -2,7 +2,6 @@ import React, { MouseEvent, useContext } from "react";
 import { store } from "../../App";
 import identifyDockItem from "../../utils/helpers/identifyDockItem";
 import openWeatherApp from "../../utils/helpers/openWeatherApp";
-import toggleWallpaperVis from "../../utils/helpers/toggleWallpaperVis";
 import "./Dock.scss";
 
 export default function Dock() {
@@ -19,16 +18,6 @@ export default function Dock() {
   const resetDock = (e: MouseEvent) => {
     dispatch({
       type: "dock/RESET",
-    });
-  };
-
-  const openWallpaperWindow = (e: React.MouseEvent) => {
-    if (state.settings.wallpaper.open) {
-      toggleWallpaperVis(e);
-    }
-
-    dispatch({
-      type: "wallpaper/TOGGLE",
     });
   };
 
@@ -69,7 +58,6 @@ export default function Dock() {
           id="1"
           onMouseEnter={selectDockItem}
           onMouseLeave={resetDock}
-          onClick={openWallpaperWindow}
         >
           <div className="tool-tip">Photos</div>
           <img
@@ -155,9 +143,6 @@ export default function Dock() {
           id="4"
           onMouseEnter={selectDockItem}
           onMouseLeave={resetDock}
-          onClick={() =>
-            window.open("https://code.visualstudio.com/", "_blank")
-          }
         >
           <div className="tool-tip">VSCode</div>
           <img
@@ -183,9 +168,6 @@ export default function Dock() {
           id="5"
           onMouseEnter={selectDockItem}
           onMouseLeave={resetDock}
-          onClick={() =>
-            window.open("https://www.apple.com/de/apple-music/", "_blank")
-          }
         >
           <div className="tool-tip">Music</div>
           <img
@@ -244,9 +226,6 @@ export default function Dock() {
           id="7"
           onMouseEnter={selectDockItem}
           onMouseLeave={resetDock}
-          onClick={() =>
-            window.open("https://github.com/gianlucajahn/macOS-react", "_blank")
-          }
         >
           <div className="tool-tip">GitHub</div>
           <img
@@ -270,7 +249,6 @@ export default function Dock() {
           id="8"
           onMouseEnter={selectDockItem}
           onMouseLeave={resetDock}
-          onClick={() => window.open("https://de.scalable.capital/", "_blank")}
         >
           <div className="tool-tip">Scalable</div>
           <img
@@ -292,7 +270,6 @@ export default function Dock() {
           id="9"
           onMouseEnter={selectDockItem}
           onMouseLeave={resetDock}
-          onClick={() => window.open("https://twitter.com/Apple", "_blank")}
         >
           <div className="tool-tip">Twitter</div>
           <img

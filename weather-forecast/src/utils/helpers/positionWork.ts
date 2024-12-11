@@ -94,16 +94,18 @@ const positionWork = async function () {
   let todaysIntervals: any = [];
   for (const interval of forecastArray) {
     if (daysArray.length === 0) {
+      const currentDayName = previousDayName;
       todaysIntervals = forecastArray.filter(
-        (element: sortedIntervalType) => element.dateName === previousDayName
+        (element: sortedIntervalType) => element.dateName === currentDayName
       );
       daysArray.push(todaysIntervals);
     }
 
     if (interval.dateName !== previousDayName) {
       previousDayName = interval.dateName;
+      const currentDayName = previousDayName;
       todaysIntervals = forecastArray.filter(
-        (element: sortedIntervalType) => element.dateName === previousDayName
+        (element: sortedIntervalType) => element.dateName === currentDayName
       );
       daysArray.push(todaysIntervals);
     }

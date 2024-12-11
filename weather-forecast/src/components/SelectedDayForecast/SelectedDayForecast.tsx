@@ -21,7 +21,7 @@ import { ReactComponent as Tornado } from "../../resources/images/svg/weather/To
 import nightTimes from "../../utils/helpers/nightTimes";
 
 export default function SelectedDayForecast() {
-  const [state, dispatch] = useContext(store);
+  const [state] = useContext(store);
 
   const returnCurrentCon = (weather: string, i: number) => {
     switch (weather) {

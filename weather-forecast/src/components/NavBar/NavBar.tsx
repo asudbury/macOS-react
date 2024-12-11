@@ -2,12 +2,10 @@ import React, { useContext, useEffect } from "react";
 import { store } from "../../App";
 import "./NavBar.scss";
 import { ReactComponent as Settings } from "../../resources/images/svg/settings.svg";
-import getDate from "../../utils/helpers/getDate";
 import DropdownComponent from "../DropdownComponent/DropdownComponent";
 import SettingsDropdown from "../SettingsDropdown/SettingsDropdown";
-import { AnimatePresence, motion } from "framer-motion";
 
-export default function () {
+export default function NavBar() {
   const [state, dispatch] = useContext(store);
 
   useEffect(() => {
